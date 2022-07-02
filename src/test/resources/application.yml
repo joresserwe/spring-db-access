@@ -7,3 +7,6 @@ spring:
 logging:
   level:
     org.springframework.jdbc: debug
+    org.hibernate:
+      SQL: debug
+      type.descriptor.sql.BasicBinder: trace
