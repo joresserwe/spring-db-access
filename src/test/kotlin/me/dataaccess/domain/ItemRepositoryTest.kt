@@ -3,6 +3,7 @@ package me.dataaccess.domain
 import me.dataaccess.repository.ItemRepository
 import me.dataaccess.repository.ItemSearchCond
 import me.dataaccess.repository.ItemUpdateDto
+import mu.KotlinLogging
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -15,6 +16,8 @@ internal class ItemRepositoryTest {
 
     @Autowired
     private lateinit var itemRepository: ItemRepository
+
+    private val log = KotlinLogging.logger {}
 
     @Test
     fun save() {
@@ -56,6 +59,8 @@ internal class ItemRepositoryTest {
         itemRepository.save(item1)
         itemRepository.save(item2)
         itemRepository.save(item3)
+
+        log.info { "repository type=${itemRepository::class}" }
 
         //둘 다 없음 검증
         test(null, null, item1, item2, item3)
