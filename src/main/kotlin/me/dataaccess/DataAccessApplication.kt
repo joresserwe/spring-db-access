@@ -1,6 +1,6 @@
 package me.dataaccess
 
-import me.dataaccess.config.JdbcTemplateV2Config
+import me.dataaccess.config.JdbcTemplateV3Config
 import me.dataaccess.repository.ItemRepository
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Profile
 
 //@Import(MemoryConfig::class)
 //@Import(JdbcTemplateV1Config::class)
-@Import(JdbcTemplateV2Config::class)
+//@Import(JdbcTemplateV2Config::class)
+@Import(JdbcTemplateV3Config::class)
 @SpringBootApplication(scanBasePackages = ["me.dataaccess.web"])
 class DataAccessApplication {
     @Bean
