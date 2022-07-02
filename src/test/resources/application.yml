@@ -1,1 +1,9 @@
-spring.profiles.active: test
+spring:
+  profiles.active: test
+  datasource:
+    url: jdbc:h2:tcp://localhost/./data-access
+    username: sa
+    password:
+logging:
+  level:
+    org.springframework.jdbc: debug
