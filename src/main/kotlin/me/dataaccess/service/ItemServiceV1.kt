@@ -16,7 +16,7 @@ class ItemServiceV1(
     override fun update(itemId: Long, updateParam: ItemUpdateDto) =
         itemRepository.update(itemId, updateParam)
 
-    override fun findById(id: Long): Item = itemRepository.findById(id)
+    override fun findById(id: Long): Item? = itemRepository.findById(id)
 
     override fun findItems(itemSearch: ItemSearchCond) = itemRepository.findAll(itemSearch)
 }
