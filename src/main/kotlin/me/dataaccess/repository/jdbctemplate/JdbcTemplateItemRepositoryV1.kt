@@ -77,9 +77,6 @@ class JdbcTemplateItemRepositoryV1(
         }
 
         log.info { "sql=${sql}" }
-        return if (param.isEmpty())
-            template.query(sql, itemRowMapper())
-        else
-            template.query(sql, itemRowMapper(), *param.toArray())
+        return template.query(sql, itemRowMapper(), *param.toArray())
     }
 }
