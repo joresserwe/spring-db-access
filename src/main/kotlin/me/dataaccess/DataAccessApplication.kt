@@ -1,6 +1,6 @@
 package me.dataaccess
 
-import me.dataaccess.config.SpringDatraJpaConfig
+import me.dataaccess.config.SpringDataJpaConfig
 import me.dataaccess.repository.ItemRepository
 import mu.KotlinLogging
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Profile
 //@Import(JdbcTemplateV2Config::class)
 //@Import(JdbcTemplateV3Config::class)
 //@Import(JpaConfig::class)
-@Import(SpringDatraJpaConfig::class)
+@Import(SpringDataJpaConfig::class)
 @SpringBootApplication(scanBasePackages = ["me.dataaccess.web"])
 class DataAccessApplication {
 

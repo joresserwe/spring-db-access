@@ -21,7 +21,7 @@ data class Item(
         if (other == null || Hibernate.getClass(this) != Hibernate.getClass(other)) return false
         other as Item
 
-        return id != null && id == other.id
+        return id == other.id
     }
 
     override fun hashCode(): Int = javaClass.hashCode()
